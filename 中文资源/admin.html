@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员后台 - 中文学习资源平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .admin-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .admin-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #4a6491;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2c3e50;
+        }
+        
+        .github-info {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+            border-left: 4px solid #4a6491;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #4a6491;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-cog"></i> 管理员后台</h1>
+            <p>上传和管理HSK学习资源</p>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <div class="admin-header">
+            <h2>添加新资源</h2>
+            <p>填写资源信息并获取GitHub直链</p>
+        </div>
+        
+        <form class="admin-form" id="resourceForm">
+            <div class="form-group">
+                <label for="resourceTitle">资源标题 *</label>
+                <input type="text" id="resourceTitle" required placeholder="例如：HSK标准教程1">
+            </div>
+            
+            <div class="form-group">
+                <label for="resourceAuthor">作者/发布方 *</label>
+                <input type="text" id="resourceAuthor" required placeholder="例如：姜丽萍">
+            </div>
+            
+            <div class="form-group">
+                <label for="resourceLevel">HSK级别 *</label>
+                <select id="resourceLevel" required>
+                    <option value="">选择级别</option>
+                    <option value="hsk1">HSK 1级</option>
+                    <option value="hsk2">HSK 2级</option>
+                    <option value="hsk3">HSK 3级</option>
+                    <option value="hsk4">HSK 4级</option>
+                    <option value="hsk5">HSK 5级</option>
+                    <option value="hsk6">HSK 6级</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="resourceType">资源类型 *</label>
+                <select id="resourceType" required>
+                    <option value="">选择类型</option>
+                    <option value="textbook">教材</option>
+                    <option value="workbook">练习册</option>
+                    <option value="audio">音频</option>
+                    <option value="video">视频</option>
+                    <option value="exam">模拟试题</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="resourceDescription">资源描述 *</label>
+                <textarea id="resourceDescription" required placeholder="简要描述资源内容..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="githubUrl">GitHub文件URL *</label>
+                <input type="url" id="githubUrl" required placeholder="https://github.com/yourusername/repo/blob/main/path/file.pdf">
+                <small>注意：请使用GitHub的"raw"链接格式，将"blob"改为"raw"</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="fileSize">文件大小</label>
+                <input type="text" id="fileSize" placeholder="例如：25.4 MB">
+            </div>
+            
+            <button type="submit" class="submit-btn">添加资源</button>
+        </form>
+        
+        <div class="github-info">
+            <h3><i class="fab fa-github"></i> GitHub使用说明</h3>
+            <p>1. 将资源文件上传到你的GitHub仓库</p>
+            <p>2. 获取文件的"raw"链接（点击文件 → Raw按钮）</p>
+            <p>3. 链接格式：<code>https://raw.githubusercontent.com/用户名/仓库名/main/路径/文件名.pdf</code></p>
+            <p>4. 在GitHub仓库中创建一个<code>resources.json</code>文件来存储所有资源信息</p>
+        </div>
+        
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> 返回主页面</a>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 中文学习资源平台 | 管理员后台</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('resourceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 获取表单数据
+            const resourceData = {
+                title: document.getElementById('resourceTitle').value,
+                author: document.getElementById('resourceAuthor').value,
+                level: document.getElementById('resourceLevel').value,
+                type: document.getElementById('resourceType').value,
+                description: document.getElementById('resourceDescription').value,
+                githubUrl: document.getElementById('githubUrl').value,
+                fileSize: document.getElementById('fileSize').value || '未知大小',
+                fileType: getFileType(document.getElementById('githubUrl').value)
+            };
+            
+            // 转换为下载链接（将blob改为raw）
+            let downloadUrl = resourceData.githubUrl;
+            if (downloadUrl.includes('github.com') && downloadUrl.includes('blob')) {
+                downloadUrl = downloadUrl.replace('blob', 'raw');
+            }
+            resourceData.downloadUrl = downloadUrl;
+            
+            // 这里实际应该将数据保存到GitHub的resources.json文件中
+            // 暂时只显示成功消息
+            alert('资源信息已准备！\n\n实际部署时，需要将此数据添加到GitHub仓库的resources.json文件中。\n\n建议使用GitHub API或GitHub Pages自动更新。');
+            
+            // 清空表单
+            this.reset();
+        });
+        
+        function getFileType(url) {
+            const ext = url.split('.').pop().toLowerCase();
+            const typeMap = {
+                'pdf': 'PDF',
+                'mp3': 'MP3',
+                'mp4': 'MP4',
+                'zip': 'ZIP',
+                'doc': 'DOC',
+                'docx': 'DOCX'
+            };
+            return typeMap[ext] || ext.toUpperCase();
+        }
+    </script>
+</body>
+</html>
