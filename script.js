@@ -10,7 +10,7 @@ const resourcesData = [
         description: "HSK一级标准教材，适合零起点学习者 | HSK Level 1 standard textbook for complete beginners",
         fileSize: "13 MB",
         fileType: "PDF",
-        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/hsk1-textbook.pdf.pdf",
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/textbook.pdf.pdf",
         githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1-textbook.pdf.pdf"
     }
     {
@@ -22,7 +22,7 @@ const resourcesData = [
         description: "HSK一级练习册 | HSK Level 1 workbook",
         fileSize: "23 MB", // 修改为实际大小
         fileType: "PDF",
-        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/hsk1-workbook.pdf.pdf",
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/workbook.pdf.pdf",
         githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1-workbook.pdf.pdf"
 }
     // 当你上传更多文件后，在这里按照格式添加
@@ -181,5 +181,6 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
