@@ -1,5 +1,3 @@
-// 真实数据 - 从你的GitHub仓库获取
-// Real data - from your GitHub repository
 const resourcesData = [
     {
         id: 1,
@@ -10,9 +8,10 @@ const resourcesData = [
         description: "HSK一级标准教材，适合零起点学习者 | HSK Level 1 standard textbook for complete beginners",
         fileSize: "13 MB",
         fileType: "PDF",
-        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/textbook.pdf.pdf",
-        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/textbook.pdf.pdf"
-    },  // ← 这里加了逗号！
+        // 注意：文件名是 hsk1.textbook.pdf（有点号）
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/hsk1.textbook.pdf",
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1.textbook.pdf"
+    },
     {
         id: 2,
         title: "HSK1练习册 | HSK 1 Workbook",
@@ -22,13 +21,10 @@ const resourcesData = [
         description: "HSK一级练习册 | HSK Level 1 workbook",
         fileSize: "23 MB",
         fileType: "PDF",
-        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/workbook.pdf.pdf",
-        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/workbook.pdf.pdf"  // ← 修正了文件名
+        // 注意：文件名是 hsk1.workbook.pdf（有点号）
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/hsk1.workbook.pdf",
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1.workbook.pdf"
     }
-    // 当你上传更多文件后，在这里按照格式添加
-    // When you upload more files, add them here in the same format
-    // 注意：id 数字要递增，不要重复
-    // Note: id numbers should increase and not repeat
 ];
 
 // DOM元素 | DOM Elements
@@ -181,6 +177,7 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
 
