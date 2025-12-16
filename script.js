@@ -11,8 +11,8 @@ const resourcesData = [
         fileSize: "13 MB",
         fileType: "PDF",
         downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/textbook.pdf.pdf",
-        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1-textbook.pdf.pdf"
-    }
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/textbook.pdf.pdf"
+    },  // ← 这里加了逗号！
     {
         id: 2,
         title: "HSK1练习册 | HSK 1 Workbook",
@@ -20,11 +20,11 @@ const resourcesData = [
         level: "hsk1",
         type: "workbook",
         description: "HSK一级练习册 | HSK Level 1 workbook",
-        fileSize: "23 MB", // 修改为实际大小
+        fileSize: "23 MB",
         fileType: "PDF",
         downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/workbook.pdf.pdf",
-        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1-workbook.pdf.pdf"
-}
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/workbook.pdf.pdf"  // ← 修正了文件名
+    }
     // 当你上传更多文件后，在这里按照格式添加
     // When you upload more files, add them here in the same format
     // 注意：id 数字要递增，不要重复
@@ -181,6 +181,8 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+}
+
 
 
 
