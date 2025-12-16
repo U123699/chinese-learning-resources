@@ -9,8 +9,8 @@ const resourcesData = [
         description: "HSK一级标准教材，适合零起点学习者",
         fileSize: "25.4 MB",
         fileType: "PDF",
-        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/textbook.pdf",
-        githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk1/textbook.pdf"
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/textbook.pdf.pdf",
+        githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk1/textbook.pdf.pdf"
     },
     {
         id: 2,
@@ -221,3 +221,4 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
 
 }
+
