@@ -1,0 +1,202 @@
+<div class="language-switch">
+    <a href="index-zh.html" class="zh-link">中文</a>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Learning Resources - HSK 1-6 Materials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 添加一些额外的英文样式 */
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch a {
+            color: white;
+            text-decoration: none;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .language-switch a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switch">
+                <a href="index-zh.html">中文</a>
+            </div>
+            <h1><i class="fas fa-book"></i> Chinese Learning Resources Platform</h1>
+            <p>Complete HSK 1-6 Study Materials Download</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active" data-level="all">All Resources</a></li>
+                <li><a href="#" data-level="hsk1">HSK Level 1</a></li>
+                <li><a href="#" data-level="hsk2">HSK Level 2</a></li>
+                <li><a href="#" data-level="hsk3">HSK Level 3</a></li>
+                <li><a href="#" data-level="hsk4">HSK Level 4</a></li>
+                <li><a href="#" data-level="hsk5">HSK Level 5</a></li>
+                <li><a href="#" data-level="hsk6">HSK Level 6</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search textbooks, authors, or keywords...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-options">
+                <select id="typeFilter">
+                    <option value="all">All Types</option>
+                    <option value="textbook">Textbook</option>
+                    <option value="workbook">Workbook</option>
+                    <option value="audio">Audio</option>
+                    <option value="video">Video</option>
+                    <option value="exam">Practice Tests</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="resources-section">
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Resources will be loaded by JavaScript -->
+            </div>
+            <div class="loading" id="loading">Loading resources...</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Chinese Learning Resources Platform | For Educational Use Only</p>
+            <p>
+                <a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Admin Panel</a> | 
+                <a href="https://github.com/yourusername/chinese-learning-resources" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 覆盖一些文本为英文
+        document.addEventListener('DOMContentLoaded', function() {
+            // 修改加载中的文本
+            document.getElementById('loading').textContent = 'Loading resources...';
+            
+            // 更新资源类型映射
+            window.getTypeText = function(type) {
+                const typeMap = {
+                    'textbook': 'Textbook',
+                    'workbook': 'Workbook',
+                    'audio': 'Audio',
+                    'video': 'Video',
+                    'exam': 'Practice Test'
+                };
+                return typeMap[type] || type;
+            };
+            
+            // 更新模拟数据为英文描述
+            window.resourcesData = [
+                {
+                    id: 1,
+                    title: "HSK Standard Course 1",
+                    author: "Jiang Liping",
+                    level: "hsk1",
+                    type: "textbook",
+                    description: "HSK Level 1 standard textbook for complete beginners",
+                    fileSize: "25.4 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk1/textbook.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk1/textbook.pdf"
+                },
+                {
+                    id: 2,
+                    title: "HSK 1 Workbook",
+                    author: "Jiang Liping",
+                    level: "hsk1",
+                    type: "workbook",
+                    description: "Workbook to accompany HSK Standard Course 1",
+                    fileSize: "18.7 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk1/workbook.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk1/workbook.pdf"
+                },
+                {
+                    id: 3,
+                    title: "HSK Standard Course 2",
+                    author: "Jiang Liping",
+                    level: "hsk2",
+                    type: "textbook",
+                    description: "HSK Level 2 standard textbook",
+                    fileSize: "32.1 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk2/textbook.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk2/textbook.pdf"
+                },
+                {
+                    id: 4,
+                    title: "HSK 3 Listening Audio",
+                    author: "Hanban",
+                    level: "hsk3",
+                    type: "audio",
+                    description: "Audio materials for HSK Level 3 listening section",
+                    fileSize: "45.3 MB",
+                    fileType: "MP3",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk3/audio.zip",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk3/audio.zip"
+                },
+                {
+                    id: 5,
+                    title: "HSK 4 Mock Tests",
+                    author: "Hanban",
+                    level: "hsk4",
+                    type: "exam",
+                    description: "Full-length practice tests for HSK Level 4",
+                    fileSize: "12.8 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk4/mock-exam.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk4/mock-exam.pdf"
+                },
+                {
+                    id: 6,
+                    title: "HSK 5 Advanced Course",
+                    author: "Liu Xun",
+                    level: "hsk5",
+                    type: "textbook",
+                    description: "Advanced Chinese textbook for HSK Level 5",
+                    fileSize: "38.9 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk5/advanced-textbook.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk5/advanced-textbook.pdf"
+                },
+                {
+                    id: 7,
+                    title: "HSK 6 Master Reading",
+                    author: "Wang Huan",
+                    level: "hsk6",
+                    type: "textbook",
+                    description: "Advanced reading materials for HSK Level 6",
+                    fileSize: "41.2 MB",
+                    fileType: "PDF",
+                    downloadUrl: "https://raw.githubusercontent.com/yourusername/chinese-learning-resources/main/hsk6/reading.pdf",
+                    githubUrl: "https://github.com/yourusername/chinese-learning-resources/blob/main/hsk6/reading.pdf"
+                }
+            ];
+        });
+    </script>
+</body>
+</html>
