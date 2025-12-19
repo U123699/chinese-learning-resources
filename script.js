@@ -24,6 +24,19 @@ const resourcesData = [
         // 注意：文件名是 hsk1.workbook.pdf（有点号）
         downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/hsk1.workbook.pdf",
         githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/hsk1.workbook.pdf"
+    }，
+    {
+        id: 3,
+        title: "HSK标准教程2| HSK Standard Course 2",
+        author: "姜丽萍 | Jiang Liping",
+        level: "hsk2",
+        type: "textbook",
+        description: "HSK二级标准教材 | HSK Level 1 standard textbook",
+        fileSize: "13 MB",
+        fileType: "PDF",
+        // 注意：文件名是 hsk1.textbook.pdf（有点号）
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk2/hsk2.textbook.pdf",
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk2/hsk2.textbook.pdf"
     }
 ];
 
@@ -177,6 +190,7 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
 
