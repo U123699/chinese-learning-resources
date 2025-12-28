@@ -50,6 +50,19 @@ const resourcesData = [
         // 注意：文件名是 hsk1.textbook.pdf（有点号）        
        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/1.compressed.pdf",        
        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/1.compressed.pdf"    
+},
+     {                
+       id: 5,                
+       title: "新hsk4考试辅导教程|New hsk4 exams preparation guide",                
+       author: "陈香Chen Xiang",                
+       level: "level 4",                
+       type: "exams preparation guide",                
+       description: "for hsk4 exams preparation",                
+       fileSize: "23.88 MB",                
+       fileType: "PDF",                
+       // 注意：文件名是 hsk1.textbook.pdf（有点号）               
+      downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk4/NewHSK4ExamPrepationGuide.pdf",               
+      githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk4/NewHSK4ExamPrepationGuide.pdf"    
 }
 ];
 
@@ -203,6 +216,7 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
 
