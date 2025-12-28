@@ -52,12 +52,24 @@ const resourcesData = [
         title: "新HSK4考试辅导教程 | New HSK4 Exam Preparation Guide",                
         author: "陈香 | Chen Xiang",                
         level: "hsk4",
-        type: "exam", 
+        type: "examguide", 
         description: "For HSK4 exam preparation",                
         fileSize: "23.88 MB",                
         fileType: "PDF",                
         downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk4/NewHSK4ExamPreparationGuide.pdf",               
         githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk4/NewHSK4ExamPreparationGuide.pdf"    
+    },
+    {                
+        id: 6,                
+        title: "新HSK5考试辅导教程 | New HSK 5 Exam Preparation Guide",                
+        author: "陈香 | Chen Xiang",                
+        level: "hsk5",
+        type: "examguide", 
+        description: "For HSK5 exam preparation",                
+        fileSize: "23.88 MB",                
+        fileType: "PDF",                
+        downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk5/examguidehsk5.pdf",               
+        githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk5/examguidehsk5.pdf"    
     }
 ];
 
@@ -350,6 +362,7 @@ function exportToCSV() {
     link.click();
     document.body.removeChild(link);
 }
+
 
 
 
