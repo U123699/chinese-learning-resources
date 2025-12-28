@@ -40,7 +40,7 @@ const resourcesData = [
     },
     {        
         id: 4,        
-        title: "中文分级阅读一级1",        
+        title: "中文分级阅读一级1 | Chinese characters reading pictures books level 1",        
         author: "积小步母语阅读馆",        
         level: "level 1",        
         type: "picturebook",        
@@ -203,6 +203,7 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
 
