@@ -37,9 +37,9 @@ const resourcesData = [
         // 注意：文件名是 hsk1.textbook.pdf（有点号）
         downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk2/hsk2.textbook.pdf",
         githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk2/hsk2.textbook.pdf"
-    }
+    },
     {        
-       id: 4,        
+      id: 4,        
        title: "中文分级阅读一级1",        
        author: "积小步母语阅读馆",        
       level: "level 1",        
@@ -50,7 +50,7 @@ const resourcesData = [
       // 注意：文件名是 hsk1.textbook.pdf（有点号）        
      downloadUrl: "https://raw.githubusercontent.com/U123699/chinese-learning-resources/main/hsk1/1.compresses.pdf",        
      githubUrl: "https://github.com/U123699/chinese-learning-resources/blob/main/hsk1/1.compressed.pdf"    
-},
+}
 ];
 
 // DOM元素 | DOM Elements
@@ -203,6 +203,7 @@ async function loadResourcesFromGitHub() {
     // 需要一个 resources.json 文件来存储资源信息
     // Need a resources.json file to store resource information
 }
+
 
 
 
